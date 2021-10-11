@@ -1,0 +1,17 @@
+body {
+    margin: 10px;
+}
+
+#run {}
+
+#text {
+    display: block;
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    resize: none;
+    overflow: auto;
+    white-space: pre;
+    word-wrap: normal;
+    word-break: normal;
+}
