@@ -1,19 +1,28 @@
 {
-    "name": "Chrome DevTools Text",
-    "version": "1.0",
-    "description": "Text panel.",
-    "devtools_page": "devtools.html",
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": false
-    },
-    "content_scripts": [
-        {
-            "matches": ["*://*/*"],
-            "js": ["content.js"]
-        }
+  "name": "Chrome DevTools Text",
+  "version": "1.0",
+  "description": "Text panel.",
+  "devtools_page": "devtools.html",
+  "background": {
+    "scripts": [
+      "background.js"
     ],
-    "permissions": ["tabs", "*://*/*"],
-    "minimum_chrome_version": "20.0",
-    "manifest_version": 2
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "*://*/*"
+  ],
+  "minimum_chrome_version": "20.0",
+  "manifest_version": 2
 }

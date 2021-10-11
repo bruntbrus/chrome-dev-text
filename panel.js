@@ -10,18 +10,18 @@
  * devtools.panels
  */
 
-var port = chrome.runtime.connect({ name: 'panel' });
+/* global chrome */
+
+const port = chrome.runtime.connect({ name: 'panel' })
 
 port.postMessage({
-    type: 'init',
-    tabId: chrome.devtools.inspectedWindow.tabId
-});
+  type: 'init',
+  tabId: chrome.devtools.inspectedWindow.tabId,
+})
 
-document.getElementById('run').addEventListener('click', function () {
-
-    port.postMessage({
-        type: 'log',
-        text: 'hello'
-    });
-
-}, false);
+document.getElementById('run').addEventListener('click', function onClick() {
+  port.postMessage({
+    type: 'log',
+    text: 'hello',
+  })
+}, false)

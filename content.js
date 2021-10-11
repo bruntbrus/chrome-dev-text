@@ -13,12 +13,12 @@
  * other content scripts
  */
 
-chrome.runtime.onMessage.addListener(function (message) {
+/* global chrome */
 
-    switch (message.type) {
-
+chrome.runtime.onMessage.addListener(function onMessage(message) {
+  switch (message.type) {
     case 'log':
-        console.log(message.text);
-        break;
-    }
-});
+      console.log(message.text)
+      break
+  }
+})
